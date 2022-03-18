@@ -1,4 +1,50 @@
-\documentclass[12pt]{article}
+\documentclass[a4paper, 11pt]{report}
+
+\usepackage{amsmath,
+    amssymb,
+    amstext,
+    graphicx}
+
+\usepackage[ngerman]{babel}
+
+% Für geilere Tabellen
+\usepackage{supertabular}
+
+% Spaltenbreiten allgemein definiert
+\newcommand{\zutatenspalten}{p{0.2\linewidth}p{0.5\linewidth}}
+
+% Grad Celsius
+\newcommand{\C}{$^\circ$C }
+
+% Spezielle Seiten Referenz
+\newcommand{\jref}[1]{(Siehe Seite \pageref{#1})}
+
+% subzutaten
+\newcommand{\subzutat}[1]{\multicolumn{2}{l}{\textbf{#1}}}
+
+
+
+% ToC nur bis einschließlich sections
+\setcounter{tocdepth}{1}
+
+% Blöcke auskommentieren
+\usepackage{verbatim}
+
+% Ränder
+\usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=2cm,includeheadfoot]{geometry}
+
+% Kapitelindex
+\usepackage{minitoc}
+\mtcselectlanguage{german}
+\setcounter{minitocdepth}{1}
+
+% hyperref
+\usepackage{hyperref}
+
+%
+\title{Kochbuch}
+\author{Jakob}
+\date{\today{}, München}
 
 
 \begin{document}
@@ -8,6 +54,6 @@
 
     \input{hygiene/hygiene.tex}
     \input{kalkulieren/kalkulieren.tex}
-    \input{rezepte/subdir.tex}
+    \input{rezepte/rezepte.tex}
 
 \end{document}
