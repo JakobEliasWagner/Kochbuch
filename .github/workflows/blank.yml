@@ -19,3 +19,7 @@ jobs:
         with:
           root_file: main.tex
           working_directory: latex-out
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Kochbuch
+          path: latex-out/main.pdf
